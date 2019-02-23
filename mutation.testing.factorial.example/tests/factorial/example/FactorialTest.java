@@ -22,6 +22,11 @@ public class FactorialTest {
 
 	@Test
 	public void testInductiveCase() {
+		// our specification assumes that factorial.compute(4)
+		// yields the correct value, i.e., 24
+		// thus we must assert this induction hypothesis
+		assertEquals(24, factorial.compute(4));
+		// ...otherwise a mutant returning 0 will survive!
 		assertEquals(5 * factorial.compute(4), factorial.compute(5));
 	}
 
