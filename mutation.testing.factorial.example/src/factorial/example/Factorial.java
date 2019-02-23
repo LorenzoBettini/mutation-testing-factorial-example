@@ -7,7 +7,11 @@ public class Factorial {
 			throw new IllegalArgumentException("Negative input: " + n);
 		if (n == 0)
 			return 1;
-		return n * compute(n - 1);
+		int result = 1;
+		while (n >= 2) {
+			result *= n--;
+		}
+		return result;
 	}
 
 }
